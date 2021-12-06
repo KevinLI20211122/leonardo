@@ -16,15 +16,11 @@ import random
 app = Flask(__name__)
 
 
-line_bot_api = LineBotApi('
-                          cuD7ChiTn3zzZXQOLul4orpY0dAiKzv4oDVnUL1TdBwXfqWP/h9o5zML0dBqUXbo0CbUh8f/A9rK6eVZTzIJ6bFFRHqc9BefKJHXggrfUYtS00Vv05Z4G5J4pbrdI6okwDGFedrLWQ1SAcTJ8I1JpAdB04t89/1O/w1cDnyilFU=
-')
+line_bot_api = LineBotApi('cuD7ChiTn3zzZXQOLul4orpY0dAiKzv4oDVnUL1TdBwXfqWP/h9o5zML0dBqUXbo0CbUh8f/A9rK6eVZTzIJ6bFFRHqc9BefKJHXggrfUYtS00Vv05Z4G5J4pbrdI6okwDGFedrLWQ1SAcTJ8I1JpAdB04t89/1O/w1cDnyilFU=')
 
-handler = WebhookHandler('
-                         d9616b94c60c551df78664772b96cc41')
+handler = WebhookHandler('d9616b94c60c551df78664772b96cc41')
 
-line_bot_api.push_message('
-                          U2ef23f600f91619ef02cdb80c76434aa', TextSendMessage(text='系統測試中，若您覺得訊息干擾到您，您可以將聊天室設為靜音，謝謝喔！'))
+line_bot_api.push_message('U2ef23f600f91619ef02cdb80c76434aa', TextSendMessage(text='系統測試中，若您覺得訊息干擾到您，您可以將聊天室設為靜音，謝謝喔！'))
 
 @app.route("/callback", methods=['POST'])
 def callback():
